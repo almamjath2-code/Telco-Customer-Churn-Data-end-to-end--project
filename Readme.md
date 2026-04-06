@@ -55,6 +55,10 @@ Best Model: Random Forest (example, update with your results)
 
 An interactive app allows users to input customer information and predict churn in real-time.
 
+## 🌐 Live Demo
+👉 https://telco-customer-churn-data-end-to-end--project-aiueqylwux3rdnxy.streamlit.app/
+
+
 
 
 # How to run the app:
