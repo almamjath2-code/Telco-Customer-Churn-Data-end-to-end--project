@@ -64,3 +64,44 @@ if st.button("Predict"):
 #     new_data = pd.DataFrame({"km":[km], "year":[year], "price":[price]})
 #     new_data.to_csv("user_inputs.csv", mode='a', index=False, header=False)
 #     st.success("Data saved!")
+
+
+# this afret use api 
+
+# import streamlit as st
+# import requests
+
+# st.title("📊 Customer Churn App (API Version)")
+
+# age = st.number_input("Age")
+# tenure = st.number_input("Tenure")
+# monthly = st.number_input("Monthly Charges")
+# total = st.number_input("Total Charges")
+
+# gender = st.selectbox("Gender", ["female", "male"])
+# contract = st.selectbox("Contract", ["Month-to-month", "One year", "Two year"])
+# payment = st.selectbox("Payment Method", ["Electronic check", "Mailed check", "Bank transfer", "Credit card"])
+
+# if st.button("Predict"):
+
+#     response = requests.post(
+#         "http://127.0.0.1:8000/predict_churn",
+#         json={
+#             "age": age,
+#             "tenure": tenure,
+#             "monthly_charges": monthly,
+#             "total_charges": total,
+#             "gender": gender,
+#             "contract": contract,
+#             "payment_method": payment
+#         }
+#     )
+
+#     result = response.json()
+
+#     if result["prediction"] == 1:
+#         st.error("❌ Customer will Churn")
+#     else:
+#         st.success("✅ Customer will Stay")
+
+#     st.write("🔥 Probability:", result["churn_probability"])
